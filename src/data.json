@@ -1,0 +1,302 @@
+{
+    "personal": {
+        "name": "Abdullah Ibne Tayeb Tamur",
+        "subtitle": "AI Researcher | Medical AI | XAI | Federated Learning",
+        "tagline": "Architecting Intelligence That Heals: From Stethoscopes to Silicon.",
+        "location": "Chattogram, Bangladesh",
+        "phone": "+880 1329463330",
+        "email": "abdullahibnetayebtamur@gmail.com",
+        "portfolioUrl": "https://tamur-0uyll8f4to.vercel.app",
+        "profileImage": "/profile/tamur.png"
+    },
+    "about": {
+        "narrative": "First author on four IEEE-indexed publications, including CHD-Net (99.15% accuracy, Best Presenter Award, IEEE QPAIN 2026) and HemX (13,823 patients, TRIPOD+AI validated). Research spans medical AI, explainable AI (XAI), computer vision, federated learning, and privacy-preserving clinical systems—with a focus on clinically deployable, interpretable deep learning for real-world healthcare."
+    },
+    "publications": [
+        {
+            "id": 1,
+            "title": "HemX: Hierarchical XAI for Hematological Triage",
+            "venue": "Under Review — IEEE Access",
+            "authors": "Abdullah Ibne Tayeb Tamur (First Author)",
+            "tag": "Medical AI & XAI",
+            "status": "under-review",
+            "description": "Explainable hematological triage framework validated across 13,823 patients from three countries. Integrates global SHAP, patient-level LIME, and a novel HHI biomarker for cross-site normalization. Validated under TRIPOD+AI guidelines.",
+            "link": "#",
+            "image": "/papers/hemx/cover.png"
+        },
+        {
+            "id": 2,
+            "title": "Fed-NeuroTriage: Federated Distillation Architecture for Psychiatric NLP",
+            "venue": "Under Review — JSCDM",
+            "authors": "Abdullah Ibne Tayeb Tamur (Second Author)",
+            "tag": "Federated Learning & NLP",
+            "status": "under-review",
+            "description": "Federated learning framework for psychiatric NLP triage (Bipolar vs. MDD) using MIMIC-IV discharge summaries under privacy-preserving constraints. Addresses 250:1 class imbalance via knowledge distillation.",
+            "link": "#",
+            "image": "/papers/fed-neurotriage/cover.png"
+        },
+        {
+            "id": 3,
+            "title": "CMA-Fusion: Cross-Modal Attention Fusion for Alzheimer's Disease Detection",
+            "venue": "Under Review — ACM ICCA 2026",
+            "authors": "Abdullah Ibne Tayeb Tamur (First Author)",
+            "tag": "Multimodal Neuroimaging",
+            "status": "under-review",
+            "description": "Multimodal neuroimaging framework combining structural MRI and functional PET data via cross-modal attention fusion for early-stage Alzheimer's detection.",
+            "link": "#",
+            "image": "/papers/cma-fusion/cover.png"
+        },
+        {
+            "id": 4,
+            "title": "DiaXAI-Stack: An Explainable AI Framework for Diabetes Prediction",
+            "venue": "Under Review",
+            "authors": "Abdullah Ibne Tayeb Tamur (Fifth Author & Research Mentor)",
+            "tag": "Clinical XAI",
+            "status": "under-review",
+            "description": "Mentored a junior CIS Lab team through dataset preprocessing, XAI methodology integration (SHAP/LIME), and end-to-end manuscript preparation and submission.",
+            "link": "#",
+            "image": "/papers/diaxai-stack/cover.png"
+        },
+        {
+            "id": 5,
+            "title": "CHD-Net: An Explainable Deep Learning Framework for Pediatric Congenital Heart Disease Classification",
+            "venue": "IEEE QPAIN 2026 — Best Presenter Award 🏆",
+            "authors": "Abdullah Ibne Tayeb Tamur (First Author)",
+            "tag": "Medical AI & XAI",
+            "status": "published",
+            "description": "Achieved 99.15% accuracy and 99.99% AUC via patient-level 5-fold CV with zero frame leakage. SHAP GradientExplainer applied for anatomical validation of IAS, IVS, and ductus arteriosus regions.",
+            "link": "https://doi.org/10.1109/QPAIN69676.2026.11545695",
+            "image": "/papers/chd-net/cover.png"
+        },
+        {
+            "id": 6,
+            "title": "Dual-Stream FreqViT: FFT and Vision Transformer Fusion for Robust Plant Disease Detection",
+            "venue": "IEEE QPAIN 2026",
+            "authors": "Abdullah Ibne Tayeb Tamur (First Author)",
+            "tag": "Transformers & Agriculture",
+            "status": "published",
+            "description": "Dual-stream spatial CNN + 2D FFT spectral + Transformer encoder fusion. Achieved 97.75% accuracy under challenging field lighting conditions.",
+            "link": "https://doi.org/10.1109/QPAIN69676.2026.11546204",
+            "image": "/papers/dual-stream-freqvit/cover.png"
+        },
+        {
+            "id": 7,
+            "title": "FUSE SENet: Fusion with SE Attention Network for Robust Skin Lesion Classification",
+            "venue": "IEEE ICCIT 2025",
+            "authors": "Abdullah Ibne Tayeb Tamur (Third Author)",
+            "tag": "Computer Vision",
+            "status": "published",
+            "description": "Fusion-based feature learning with squeeze-and-excitation (SE) attention for skin lesion classification.",
+            "link": "https://doi.org/10.1109/ICCIT68739.2025.11491158",
+            "image": "/papers/fuse-senet/cover.png"
+        }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "title": "HemaTriage",
+            "shortDescription": "Clinical web app for AI-powered blood count triage in resource-constrained healthcare settings.",
+            "description": "HemaTriage is a clinical web application built on the HemX architecture, designed for CPU-only hematological triage inference in resource-constrained healthcare settings. It enables real-world clinical deployment without requiring GPU hardware.",
+            "details": "The system ingests Complete Blood Count (CBC) parameters — WBC, RBC, Hemoglobin, Platelets, Neutrophils, Lymphocytes — and runs inference through a trained XGBoost + neural ensemble model based on the HemX research framework. XAI explanations via LIME are provided per-patient, showing which blood markers drove the triage decision (Dengue / Leukemia / Normal). Built for low-resource clinics in South Asia.",
+            "tech": ["PyTorch", "Flask", "XGBoost", "SHAP", "LIME", "Python", "HTML/CSS"],
+            "link": null,
+            "githubLink": null,
+            "image": "/projects/hematriage/cover.png",
+            "gallery": ["/projects/hematriage/cover.png", "/papers/hemx/cover.png"],
+            "status": "Deployed (Internal)",
+            "year": "2026"
+        },
+        {
+            "id": 2,
+            "title": "SpectraLeaf Analytics",
+            "shortDescription": "Cloud-deployed plant disease detection using FFT + Vision Transformer dual-stream fusion.",
+            "description": "SpectraLeaf Analytics is a cloud-deployed plant disease detection application that combines spatial CNN features with FFT-based spectral representations for robust inference under challenging field lighting conditions.",
+            "details": "Based on the Dual-Stream FreqViT architecture (IEEE QPAIN 2026), the app processes leaf images through two parallel streams: a spatial CNN extracting texture features and a 2D FFT branch encoding frequency-domain disease signatures. Both are fused via a Transformer encoder. Achieves 97.75% accuracy across diverse field conditions. Deployed on Render cloud with Flask backend.",
+            "tech": ["PyTorch", "Vision Transformer", "FFT", "Flask", "Render", "OpenCV", "Python"],
+            "link": "https://plant-disease-detection-kdss.onrender.com/",
+            "githubLink": null,
+            "image": "/projects/spectraleaf/cover.png",
+            "gallery": ["/projects/spectraleaf/cover.png", "/papers/dual-stream-freqvit/cover.png"],
+            "status": "Live on Render",
+            "year": "2026"
+        },
+        {
+            "id": 3,
+            "title": "Wolf Scholar",
+            "shortDescription": "Multimodal RAG research assistant using LangChain, FAISS, and Groq LLM for medical document analysis.",
+            "description": "Wolf Scholar is an autonomous multimodal RAG-based research assistant that uses LangChain orchestration, FAISS vector database, and Groq-accelerated LLM inference for multi-document analysis and medical vision diagnostic workflows.",
+            "details": "The system can ingest multiple PDFs (research papers, clinical guidelines), chunk and embed them into a FAISS vector store, then answer complex queries with cited references. Supports image-based medical inputs for diagnostic workflows. Built with an agent loop that can autonomously plan retrieval strategies, cross-reference documents, and synthesize multi-hop answers. Named Agent-Wolf internally.",
+            "tech": ["LangChain", "FAISS", "Groq", "RAG", "Python", "Streamlit", "OpenCV"],
+            "link": null,
+            "githubLink": "https://github.com/bintamur404/Agent-Wolf",
+            "image": "/projects/wolf-scholar/cover.png",
+            "gallery": ["/projects/wolf-scholar/cover.png", "/papers/fed-neurotriage/cover.png"],
+            "status": "Open Source",
+            "year": "2025"
+        },
+        {
+            "id": 4,
+            "title": "Autonomous FPV Drone",
+            "shortDescription": "Hands-on built hexacopter with Arduino & GPS for 1.5km autonomous navigation and real-time FPV video.",
+            "description": "A fully custom-engineered hexacopter drone built from scratch with Arduino flight controller, GPS module, and 5.8GHz FPV camera system. Achieves 1.5 km operational range with 20-minute flight time and real-time video transmission.",
+            "details": "Designed and assembled entirely by hand: custom integration of Arduino Mega, u-blox NEO-8M GPS, FlySky FS-i6 RF control system, and 5.8GHz analog FPV transmission. Implements a PID controller for autonomous waypoint navigation. Features live telemetry overlay including GPS coordinates, altitude, battery voltage, and RSSI signal strength. The hexacopter frame was custom-configured for stability and payload. Tested across multiple field missions in Chittagong Division, achieving 1.5km range and 20-minute endurance.",
+            "tech": ["Arduino Mega", "GPS (u-blox NEO-8M)", "FlySky RF", "PID Controller", "C++", "5.8GHz FPV", "ESC/BLDC"],
+            "link": null,
+            "githubLink": null,
+            "image": "/projects/fpv-drone/build_photo.jpg",
+            "gallery": ["/projects/fpv-drone/build_photo.jpg", "/projects/fpv-drone/cover.png"],
+            "status": "Field Tested",
+            "year": "2024"
+        }
+    ],
+    "experience": [
+        {
+            "id": 1,
+            "role": "Research Intern",
+            "organization": "Elite Research Lab LLC",
+            "period": "June 2026 – Present",
+            "description": "Conducting applied research on Explainable AI, clinical diagnostic systems, Retrieval-Augmented Generation, and Dual-Mode LLM frameworks under formal NDA. Developing interpretable ML pipelines for healthcare applications with attention to clinical usability, privacy compliance, and deployment constraints.",
+            "highlight": true
+        },
+        {
+            "id": 2,
+            "role": "Research Mentor",
+            "organization": "Computational Intelligence & Society (CIS) Lab, IIUC",
+            "period": "Jan 2024 – Present",
+            "description": "Mentoring undergraduate researchers through the end-to-end publication pipeline: literature review, experimental design, model development, and manuscript preparation. Guided multiple teams toward IEEE conference submissions in PyTorch, computer vision, attention mechanisms, and XAI tools.",
+            "highlight": true
+        },
+        {
+            "id": 3,
+            "role": "Managing Director",
+            "organization": "City I Restaurant, Chattogram",
+            "period": "Jan 2023 – Present",
+            "description": "Operational and strategic leadership of a 45-member team alongside full-time academic and research activity. Overseeing operational analytics, resource allocation, and organizational development.",
+            "highlight": false
+        }
+    ],
+    "education": [
+        {
+            "id": 1,
+            "degree": "Bachelor of Science in Computer Science and Engineering",
+            "institution": "International Islamic University Chittagong (IIUC), Bangladesh",
+            "period": "Jan 2022 – Jun 2026",
+            "grade": "CGPA: 3.394 / 4.00 (Last 4 semesters: 3.69 / 4.00)",
+            "coursework": "Machine Learning, Deep Learning, Digital Image Processing, Computer Vision, Neural Networks & Fuzzy Systems, Pattern Recognition & Image Processing",
+            "thesis": "Dual-Stream FreqViT: FFT and Vision Transformer Fusion for Robust Plant Disease Detection"
+        },
+        {
+            "id": 2,
+            "degree": "Higher Secondary Certificate (HSC) — Science",
+            "institution": "Hazera Taju Degree College",
+            "period": "2018 – 2020",
+            "grade": "GPA: 5.00 / 5.00",
+            "coursework": "",
+            "thesis": ""
+        },
+        {
+            "id": 3,
+            "degree": "Secondary School Certificate (SSC) — Science",
+            "institution": "Lamabazar Asad Ali Sowdagar City Corporation High School",
+            "period": "2016 – 2018",
+            "grade": "GPA: 5.00 / 5.00",
+            "coursework": "",
+            "thesis": ""
+        }
+    ],
+    "skills": {
+        "research": [
+            "Explainable AI (XAI)",
+            "SHAP",
+            "LIME",
+            "Federated Learning",
+            "Conformal Prediction",
+            "Uncertainty Quantification",
+            "TRIPOD+AI",
+            "PROBAST+AI"
+        ],
+        "programming": [
+            "Python",
+            "C++",
+            "SQL",
+            "HTML/CSS",
+            "JavaScript"
+        ],
+        "frameworks": [
+            "PyTorch",
+            "TensorFlow",
+            "Keras",
+            "OpenCV",
+            "LangChain",
+            "Flask",
+            "Jupyter Notebook"
+        ],
+        "tools": [
+            "Git",
+            "LaTeX",
+            "FAISS",
+            "Groq"
+        ],
+        "domains": [
+            "Medical AI",
+            "Computer Vision",
+            "Deep Learning",
+            "Explainable AI (XAI)",
+            "Federated Learning",
+            "Retrieval-Augmented Generation",
+            "NLP",
+            "Multimodal Neuroimaging"
+        ]
+    },
+    "achievements": [
+        "Best Presenter Award — IEEE QPAIN Conference 2026, awarded for CHD-Net clinical AI framework.",
+        "Ranked 6th among 700+ university participants; top national performer (50,000+ competitors) — AgentX AI Prompting Competition.",
+        "Assistant Social Welfare Secretary, IIUC Computer Club — organized mental health awareness and peer academic support.",
+        "Volunteer — 2024 Flood Relief Operations; collaborated with As-Sadaqa and Bangladesh Red Crescent Society."
+    ],
+    "updates": [
+        {
+            "id": 1,
+            "type": "Award",
+            "title": "Best Presenter Award — IEEE QPAIN 2026",
+            "timeframe": "Jun 2026",
+            "summary": "Received the Best Presenter Award at IEEE QPAIN 2026 for the CHD-Net clinical AI framework presentation (99.15% accuracy on pediatric CHD classification).",
+            "link": "https://doi.org/10.1109/QPAIN69676.2026.11545695",
+            "image": "/papers/chd-net/cover.png"
+        },
+        {
+            "id": 2,
+            "type": "Internship",
+            "title": "Research Intern — Elite Research Lab LLC",
+            "timeframe": "Jun 2026",
+            "summary": "Joined Elite Research Lab LLC as a Research Intern, conducting applied research on Explainable AI, clinical diagnostic systems, and Dual-Mode LLM frameworks under formal NDA.",
+            "link": "#",
+            "image": "/papers/hemx/cover.png"
+        },
+        {
+            "id": 3,
+            "type": "Publication",
+            "title": "CHD-Net Published at IEEE QPAIN 2026",
+            "timeframe": "Jun 2026",
+            "summary": "CHD-Net accepted and presented at IEEE QPAIN 2026. Achieved 99.15% accuracy and 99.99% AUC with patient-level 5-fold cross-validation and zero frame leakage.",
+            "link": "https://doi.org/10.1109/QPAIN69676.2026.11545695",
+            "image": "/papers/chd-net/cover.png"
+        },
+        {
+            "id": 4,
+            "type": "Publication",
+            "title": "Dual-Stream FreqViT Published at IEEE QPAIN 2026",
+            "timeframe": "Jun 2026",
+            "summary": "FreqViT paper accepted and presented at IEEE QPAIN 2026. 97.75% accuracy on plant disease detection using FFT + Vision Transformer fusion.",
+            "link": "https://doi.org/10.1109/QPAIN69676.2026.11546204",
+            "image": "/papers/dual-stream-freqvit/cover.png"
+        }
+    ],
+    "social": {
+        "github": "https://github.com/bintamur404",
+        "linkedin": "https://www.linkedin.com/in/abdullah-ibne-tayeb-tamur-0485b0275/",
+        "scholar": "https://scholar.google.com/citations?user=ljwppWsAAAAJ",
+        "orcid": "https://orcid.org/0009-0008-4646-9417",
+        "email": "mailto:abdullahibnetayebtamur@gmail.com"
+    }
+}
