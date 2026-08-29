@@ -213,15 +213,15 @@ const About = () => {
                                  backdropFilter: 'blur(10px)'
                              }}>
                             <div className="text-center">
-                                <span className="block text-xl md:text-2xl font-black text-indigo-400">4</span>
-                                <span className="text-[9px] uppercase font-mono tracking-widest text-slate-400">IEEE Papers</span>
+                                <span className="block text-xl md:text-2xl font-black text-indigo-400">5</span>
+                                <span className="text-[9px] uppercase font-mono tracking-widest text-slate-400">Publications</span>
                             </div>
                             <div className="text-center border-x border-white/5">
-                                <span className="block text-xl md:text-2xl font-black text-orange-400">1st</span>
-                                <span className="text-[9px] uppercase font-mono tracking-widest text-slate-400">Author Roles</span>
+                                <span className="block text-xl md:text-2xl font-black text-orange-400">3</span>
+                                <span className="text-[9px] uppercase font-mono tracking-widest text-slate-400">1st Author</span>
                             </div>
                             <div className="text-center">
-                                <span className="block text-xl md:text-2xl font-black text-emerald-400">13K+</span>
+                                <span className="block text-xl md:text-2xl font-black text-emerald-400">13.8K+</span>
                                 <span className="text-[9px] uppercase font-mono tracking-widest text-slate-400">Patients Val.</span>
                             </div>
                         </div>

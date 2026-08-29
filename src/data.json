@@ -1,26 +1,26 @@
 {
     "personal": {
         "name": "Abdullah Ibne Tayeb Tamur",
-        "subtitle": "AI Researcher | Medical AI | XAI | Federated Learning",
+        "subtitle": "AI Researcher | Medical AI | XAI | Multimodal Clinical AI | Federated Learning",
         "tagline": "Architecting Intelligence That Heals: From Stethoscopes to Silicon.",
         "location": "Chattogram, Bangladesh",
         "phone": "+880 1329463330",
         "email": "abdullahibnetayebtamur@gmail.com",
-        "portfolioUrl": "https://tamur-0uyll8f4to.vercel.app",
+        "portfolioUrl": "https://bintamur404.github.io/Portfolio/",
         "profileImage": "/profile/tamur.png"
     },
     "about": {
-        "narrative": "First author on four IEEE-indexed publications, including CHD-Net (99.15% accuracy, Best Presenter Award, IEEE QPAIN 2026) and HemX (13,823 patients, TRIPOD+AI validated). Research spans medical AI, explainable AI (XAI), computer vision, federated learning, and privacy-preserving clinical systems—with a focus on clinically deployable, interpretable deep learning for real-world healthcare."
+        "narrative": "First author of three peer-reviewed conference papers and co-author of two additional peer-reviewed conference papers, with further medical AI manuscripts under review. Recent work includes CHD-Net (Best Presenter Award, IEEE QPAIN 2026), CMA-Fusion accepted at ICCA 2026, and HemX evaluated on 13,823 patient records under review at Biomedical Signal Processing and Control. Research focuses on clinically useful, interpretable, and validated AI systems for medical imaging, clinical triage, multimodal healthcare data, and decision support."
     },
     "publications": [
         {
             "id": 1,
             "title": "HemX: Hierarchical XAI for Hematological Triage",
-            "venue": "Under Review — IEEE Access",
+            "venue": "Under Review — Biomedical Signal Processing and Control (Elsevier)",
             "authors": "Abdullah Ibne Tayeb Tamur (First Author)",
             "tag": "Medical AI & XAI",
             "status": "under-review",
-            "description": "Explainable hematological triage framework validated across 13,823 patients from three countries. Integrates global SHAP, patient-level LIME, and a novel HHI biomarker for cross-site normalization. Validated under TRIPOD+AI guidelines.",
+            "description": "Explainable hematological triage framework evaluated on 13,823 patient records. Integrates global SHAP, patient-level LIME, and the Hematological Heterogeneity Index (HHI) as an engineered biomarker. Evaluated using TRIPOD+AI-guided reporting and stratified 5-fold cross-validation.",
             "link": "#",
             "image": "/papers/hemx/cover.png"
         },
@@ -31,29 +31,29 @@
             "authors": "Abdullah Ibne Tayeb Tamur (Second Author)",
             "tag": "Federated Learning & NLP",
             "status": "under-review",
-            "description": "Federated learning framework for psychiatric NLP triage (Bipolar vs. MDD) using MIMIC-IV discharge summaries under privacy-preserving constraints. Addresses 250:1 class imbalance via knowledge distillation.",
+            "description": "Privacy-aware federated learning framework for psychiatric NLP triage using MIMIC-IV discharge summaries. Addresses severe class imbalance through knowledge distillation and inverse-frequency weighting.",
             "link": "#",
             "image": "/papers/fed-neurotriage/cover.png"
         },
         {
             "id": 3,
-            "title": "CMA-Fusion: Cross-Modal Attention Fusion for Alzheimer's Disease Detection",
-            "venue": "Under Review — ACM ICCA 2026",
+            "title": "Cross Modality Attention for Leakage-Free Alzheimer's Disease Detection Using 3D MRI and Clinical Biomarkers",
+            "venue": "ICCA 2026 — Accepted for Presentation",
             "authors": "Abdullah Ibne Tayeb Tamur (First Author)",
             "tag": "Multimodal Neuroimaging",
-            "status": "under-review",
-            "description": "Multimodal neuroimaging framework combining structural MRI and functional PET data via cross-modal attention fusion for early-stage Alzheimer's detection.",
+            "status": "published",
+            "description": "Cross-modality attention framework for Alzheimer's disease detection using 3D MRI and clinical biomarkers. Focuses on leakage-free experimental design, multimodal feature integration, and clinically relevant decision-support modeling for neurodegenerative disease detection.",
             "link": "#",
             "image": "/papers/cma-fusion/cover.png"
         },
         {
             "id": 4,
-            "title": "DiaXAI-Stack: An Explainable AI Framework for Diabetes Prediction",
-            "venue": "Under Review",
+            "title": "DiaXAI-Stack: An Explainable AI Framework for Diabetes Prediction Using Leakage-Free Stacking Ensemble Learning",
+            "venue": "ICCA 2026 — Accepted for Presentation",
             "authors": "Abdullah Ibne Tayeb Tamur (Fifth Author & Research Mentor)",
             "tag": "Clinical XAI",
-            "status": "under-review",
-            "description": "Mentored a junior CIS Lab team through dataset preprocessing, XAI methodology integration (SHAP/LIME), and end-to-end manuscript preparation and submission.",
+            "status": "published",
+            "description": "Explainable AI framework for diabetes prediction using leakage-free stacking ensemble learning and dual threshold optimization. Contributed as research mentor: dataset preprocessing, SHAP/LIME integration for clinical transparency, experimental design, and manuscript development.",
             "link": "#",
             "image": "/papers/diaxai-stack/cover.png"
         },
@@ -64,7 +64,7 @@
             "authors": "Abdullah Ibne Tayeb Tamur (First Author)",
             "tag": "Medical AI & XAI",
             "status": "published",
-            "description": "Achieved 99.15% accuracy and 99.99% AUC via patient-level 5-fold CV with zero frame leakage. SHAP GradientExplainer applied for anatomical validation of IAS, IVS, and ductus arteriosus regions.",
+            "description": "Explainable ensemble framework for pediatric CHD classification from echocardiography images. Achieved 99.15% accuracy and 99.99% AUC on 4,140 images via stratified 5-fold cross-validation. SHAP GradientExplainer applied for anatomical localisation of IAS, IVS, and ductus arteriosus regions.",
             "link": "https://doi.org/10.1109/QPAIN69676.2026.11545695",
             "image": "/papers/chd-net/cover.png"
         },
@@ -73,9 +73,9 @@
             "title": "Dual-Stream FreqViT: FFT and Vision Transformer Fusion for Robust Plant Disease Detection",
             "venue": "IEEE QPAIN 2026",
             "authors": "Abdullah Ibne Tayeb Tamur (First Author)",
-            "tag": "Transformers & Agriculture",
+            "tag": "Transformers & Computer Vision",
             "status": "published",
-            "description": "Dual-stream spatial CNN + 2D FFT spectral + Transformer encoder fusion. Achieved 97.75% accuracy under challenging field lighting conditions.",
+            "description": "Dual-stream architecture combining a spatial CNN branch, 2D FFT spectral branch, and Transformer encoder fusion. Achieved 97.75% accuracy under challenging field-lighting conditions.",
             "link": "https://doi.org/10.1109/QPAIN69676.2026.11546204",
             "image": "/papers/dual-stream-freqvit/cover.png"
         },
@@ -86,7 +86,7 @@
             "authors": "Abdullah Ibne Tayeb Tamur (Third Author)",
             "tag": "Computer Vision",
             "status": "published",
-            "description": "Fusion-based feature learning with squeeze-and-excitation (SE) attention for skin lesion classification.",
+            "description": "Fusion-based feature learning with squeeze-and-excitation (SE) attention for robust skin lesion classification.",
             "link": "https://doi.org/10.1109/ICCIT68739.2025.11491158",
             "image": "/papers/fuse-senet/cover.png"
         }
@@ -94,10 +94,24 @@
     "projects": [
         {
             "id": 1,
+            "title": "HemoForge — Explainable Hematology Platform",
+            "shortDescription": "Full-stack explainable CBC analysis platform with SHAP, LangGraph workflow, OCR ingestion, and a Doctor/Patient LLM assistant.",
+            "description": "HemoForge is a full-stack explainable hematology engineering platform integrating a 9-class HistGradientBoosting model, SHAP explanations, out-of-distribution (OOD) assessment, selective review indicators, and a 10-node LangGraph workflow with LangSmith tracing.",
+            "details": "HemoParse supports human-verified PDF/image CBC extraction using PyMuPDF, pdfplumber, Tesseract OCR, and Groq LLM fallback. FastAPI, Next.js/TypeScript, and SQLite power the API, interface, case archive, and audit trail. Being extended with HemoAssist — a Doctor/Patient LLM assistant for plain-language report explanation, model-result interpretation, and controlled scholarly-literature retrieval.",
+            "tech": ["FastAPI", "Next.js", "TypeScript", "LangGraph", "LangSmith", "SHAP", "Groq", "Tesseract OCR", "SQLite", "PyMuPDF"],
+            "link": null,
+            "githubLink": null,
+            "image": "/projects/hematriage/cover.png",
+            "gallery": ["/projects/hematriage/cover.png", "/papers/hemx/cover.png"],
+            "status": "In Development",
+            "year": "2026"
+        },
+        {
+            "id": 2,
             "title": "HemaTriage",
-            "shortDescription": "Clinical web app for AI-powered blood count triage in resource-constrained healthcare settings.",
+            "shortDescription": "Clinical web application based on the HemX architecture for CPU-only hematological triage in resource-constrained healthcare settings.",
             "description": "HemaTriage is a clinical web application built on the HemX architecture, designed for CPU-only hematological triage inference in resource-constrained healthcare settings. It enables real-world clinical deployment without requiring GPU hardware.",
-            "details": "The system ingests Complete Blood Count (CBC) parameters — WBC, RBC, Hemoglobin, Platelets, Neutrophils, Lymphocytes — and runs inference through a trained XGBoost + neural ensemble model based on the HemX research framework. XAI explanations via LIME are provided per-patient, showing which blood markers drove the triage decision (Dengue / Leukemia / Normal). Built for low-resource clinics in South Asia.",
+            "details": "The system ingests Complete Blood Count (CBC) parameters — WBC, RBC, Hemoglobin, Platelets, Neutrophils, Lymphocytes — and runs inference through a trained XGBoost + neural ensemble model based on the HemX research framework. XAI explanations via LIME are provided per-patient, showing which blood markers drove the triage decision. Built for low-resource clinics in South Asia.",
             "tech": ["PyTorch", "Flask", "XGBoost", "SHAP", "LIME", "Python", "HTML/CSS"],
             "link": null,
             "githubLink": null,
@@ -107,7 +121,21 @@
             "year": "2026"
         },
         {
-            "id": 2,
+            "id": 3,
+            "title": "Customer Support Agent",
+            "shortDescription": "LangGraph + Groq (Llama 3.3 70B) agent with six domain tools, human-in-the-loop approval, guardrails, and LangSmith observability.",
+            "description": "A production-grade customer support agent built with LangGraph and Groq (Llama 3.3 70B). Features triage classification, six domain-specific tools, input/output guardrails, human-in-the-loop approval, short-term memory, LangSmith observability, and SQLite persistence.",
+            "details": "The agent orchestrates triage classification, routes queries to six specialized domain tools, applies input and output guardrails for safety, and supports human-in-the-loop approval for sensitive actions. LangSmith provides full observability and tracing. Short-term session memory and SQLite ensure conversation continuity and audit logging.",
+            "tech": ["LangGraph", "Groq", "Llama 3.3 70B", "LangSmith", "SQLite", "Python"],
+            "link": null,
+            "githubLink": "https://github.com/bintamur404",
+            "image": "/projects/wolf-scholar/cover.png",
+            "gallery": ["/projects/wolf-scholar/cover.png"],
+            "status": "Open Source",
+            "year": "2026"
+        },
+        {
+            "id": 4,
             "title": "SpectraLeaf Analytics",
             "shortDescription": "Cloud-deployed plant disease detection using FFT + Vision Transformer dual-stream fusion.",
             "description": "SpectraLeaf Analytics is a cloud-deployed plant disease detection application that combines spatial CNN features with FFT-based spectral representations for robust inference under challenging field lighting conditions.",
@@ -121,11 +149,11 @@
             "year": "2026"
         },
         {
-            "id": 3,
+            "id": 5,
             "title": "Wolf Scholar",
-            "shortDescription": "Multimodal RAG research assistant using LangChain, FAISS, and Groq LLM for medical document analysis.",
-            "description": "Wolf Scholar is an autonomous multimodal RAG-based research assistant that uses LangChain orchestration, FAISS vector database, and Groq-accelerated LLM inference for multi-document analysis and medical vision diagnostic workflows.",
-            "details": "The system can ingest multiple PDFs (research papers, clinical guidelines), chunk and embed them into a FAISS vector store, then answer complex queries with cited references. Supports image-based medical inputs for diagnostic workflows. Built with an agent loop that can autonomously plan retrieval strategies, cross-reference documents, and synthesize multi-hop answers. Named Agent-Wolf internally.",
+            "shortDescription": "Multimodal RAG research assistant using LangChain, FAISS, and Groq LLM for multi-document medical analysis.",
+            "description": "Wolf Scholar is an autonomous multimodal RAG-based research assistant that uses LangChain orchestration, FAISS vector database, and Groq-accelerated LLM inference for multi-document analysis and medical vision research workflows.",
+            "details": "The system ingests multiple PDFs (research papers, clinical guidelines), chunks and embeds them into a FAISS vector store, then answers complex queries with cited references. Supports image-based medical inputs for diagnostic workflows. Built with an agent loop that autonomously plans retrieval strategies, cross-references documents, and synthesizes multi-hop answers.",
             "tech": ["LangChain", "FAISS", "Groq", "RAG", "Python", "Streamlit", "OpenCV"],
             "link": null,
             "githubLink": "https://github.com/bintamur404/Agent-Wolf",
@@ -135,11 +163,11 @@
             "year": "2025"
         },
         {
-            "id": 4,
+            "id": 6,
             "title": "Autonomous FPV Drone",
-            "shortDescription": "Hands-on built hexacopter with Arduino & GPS for 1.5km autonomous navigation and real-time FPV video.",
+            "shortDescription": "Custom-built hexacopter with Arduino & GPS for 1.5km autonomous navigation and real-time FPV video.",
             "description": "A fully custom-engineered hexacopter drone built from scratch with Arduino flight controller, GPS module, and 5.8GHz FPV camera system. Achieves 1.5 km operational range with 20-minute flight time and real-time video transmission.",
-            "details": "Designed and assembled entirely by hand: custom integration of Arduino Mega, u-blox NEO-8M GPS, FlySky FS-i6 RF control system, and 5.8GHz analog FPV transmission. Implements a PID controller for autonomous waypoint navigation. Features live telemetry overlay including GPS coordinates, altitude, battery voltage, and RSSI signal strength. The hexacopter frame was custom-configured for stability and payload. Tested across multiple field missions in Chittagong Division, achieving 1.5km range and 20-minute endurance.",
+            "details": "Designed and assembled entirely by hand: custom integration of Arduino Mega, u-blox NEO-8M GPS, FlySky FS-i6 RF control system, and 5.8GHz analog FPV transmission. Implements a PID controller for autonomous waypoint navigation. Features live telemetry overlay including GPS coordinates, altitude, battery voltage, and RSSI signal strength. Tested across multiple field missions in Chittagong Division.",
             "tech": ["Arduino Mega", "GPS (u-blox NEO-8M)", "FlySky RF", "PID Controller", "C++", "5.8GHz FPV", "ESC/BLDC"],
             "link": null,
             "githubLink": null,
@@ -154,8 +182,8 @@
             "id": 1,
             "role": "Research Intern",
             "organization": "Elite Research Lab LLC",
-            "period": "June 2026 – Present",
-            "description": "Conducting applied research on Explainable AI, clinical diagnostic systems, Retrieval-Augmented Generation, and Dual-Mode LLM frameworks under formal NDA. Developing interpretable ML pipelines for healthcare applications with attention to clinical usability, privacy compliance, and deployment constraints.",
+            "period": "Jun 2026 – Present",
+            "description": "Conducting applied research on Explainable AI, clinical diagnostic systems, Retrieval-Augmented Generation, and dual-mode LLM frameworks under formal NDA. Developing interpretable machine learning pipelines for healthcare applications with attention to clinical usability, privacy, and deployment constraints.",
             "highlight": true
         },
         {
@@ -163,11 +191,19 @@
             "role": "Research Mentor",
             "organization": "Computational Intelligence & Society (CIS) Lab, IIUC",
             "period": "Jan 2024 – Present",
-            "description": "Mentoring undergraduate researchers through the end-to-end publication pipeline: literature review, experimental design, model development, and manuscript preparation. Guided multiple teams toward IEEE conference submissions in PyTorch, computer vision, attention mechanisms, and XAI tools.",
+            "description": "Mentoring undergraduate researchers through literature review, experimental design, model development, and manuscript preparation. Guided multiple project teams toward peer-reviewed conference submissions; supported implementation in PyTorch, computer vision architectures, attention mechanisms, and XAI tools.",
             "highlight": true
         },
         {
             "id": 3,
+            "role": "Home Tutor",
+            "organization": "Independent",
+            "period": "2020 – Present",
+            "description": "Teaching secondary and higher-secondary students in Biology, English, ICT, and Chemistry; providing personalised academic support and exam preparation guidance alongside undergraduate studies and research.",
+            "highlight": false
+        },
+        {
+            "id": 4,
             "role": "Managing Director",
             "organization": "City I Restaurant, Chattogram",
             "period": "Jan 2023 – Present",
@@ -181,7 +217,7 @@
             "degree": "Bachelor of Science in Computer Science and Engineering",
             "institution": "International Islamic University Chittagong (IIUC), Bangladesh",
             "period": "Jan 2022 – Jun 2026",
-            "grade": "CGPA: 3.394 / 4.00 (Last 4 semesters: 3.69 / 4.00)",
+            "grade": "CGPA: 3.416 / 4.00 (Last 4 semesters: 3.71 / 4.00)",
             "coursework": "Machine Learning, Deep Learning, Digital Image Processing, Computer Vision, Neural Networks & Fuzzy Systems, Pattern Recognition & Image Processing",
             "thesis": "Dual-Stream FreqViT: FFT and Vision Transformer Fusion for Robust Plant Disease Detection"
         },
@@ -210,8 +246,11 @@
             "SHAP",
             "LIME",
             "Federated Learning",
+            "LangGraph Agents",
             "Conformal Prediction",
             "Uncertainty Quantification",
+            "Clinical Model Validation",
+            "Stratified K-Fold CV",
             "TRIPOD+AI",
             "PROBAST+AI"
         ],
@@ -228,14 +267,19 @@
             "Keras",
             "OpenCV",
             "LangChain",
+            "LangGraph",
             "Flask",
+            "FastAPI",
+            "Next.js",
+            "FAISS",
             "Jupyter Notebook"
         ],
         "tools": [
             "Git",
             "LaTeX",
-            "FAISS",
-            "Groq"
+            "Groq",
+            "LangSmith",
+            "Tesseract OCR"
         ],
         "domains": [
             "Medical AI",
@@ -244,15 +288,17 @@
             "Explainable AI (XAI)",
             "Federated Learning",
             "Retrieval-Augmented Generation",
-            "NLP",
-            "Multimodal Neuroimaging"
+            "Clinical NLP",
+            "Multimodal Neuroimaging",
+            "Medical Image Analysis",
+            "Clinical Decision Support"
         ]
     },
     "achievements": [
-        "Best Presenter Award — IEEE QPAIN Conference 2026, awarded for CHD-Net clinical AI framework.",
-        "Ranked 6th among 700+ university participants; top national performer (50,000+ competitors) — AgentX AI Prompting Competition.",
-        "Assistant Social Welfare Secretary, IIUC Computer Club — organized mental health awareness and peer academic support.",
-        "Volunteer — 2024 Flood Relief Operations; collaborated with As-Sadaqa and Bangladesh Red Crescent Society."
+        "Best Presenter Award — IEEE QPAIN Conference 2026, awarded for the CHD-Net clinical AI framework presentation.",
+        "Ranked 6th among 700+ university participants; top national performer — AgentX AI Prompting Competition, IIUC level.",
+        "Assistant Social Welfare Secretary, IIUC Computer Club — organised mental health awareness programmes and coordinated peer academic support initiatives.",
+        "Volunteer — 2024 Flood Relief Operations; collaborated with As-Sadaqa and Bangladesh Red Crescent Society to distribute emergency relief in Chittagong Division."
     ],
     "updates": [
         {
@@ -260,7 +306,7 @@
             "type": "Award",
             "title": "Best Presenter Award — IEEE QPAIN 2026",
             "timeframe": "Jun 2026",
-            "summary": "Received the Best Presenter Award at IEEE QPAIN 2026 for the CHD-Net clinical AI framework presentation (99.15% accuracy on pediatric CHD classification).",
+            "summary": "Received the Best Presenter Award at IEEE QPAIN 2026 for the CHD-Net clinical AI framework presentation (99.15% accuracy on pediatric CHD classification from echocardiography).",
             "link": "https://doi.org/10.1109/QPAIN69676.2026.11545695",
             "image": "/papers/chd-net/cover.png"
         },
@@ -276,20 +322,20 @@
         {
             "id": 3,
             "type": "Publication",
-            "title": "CHD-Net Published at IEEE QPAIN 2026",
+            "title": "CHD-Net & FreqViT Published at IEEE QPAIN 2026",
             "timeframe": "Jun 2026",
-            "summary": "CHD-Net accepted and presented at IEEE QPAIN 2026. Achieved 99.15% accuracy and 99.99% AUC with patient-level 5-fold cross-validation and zero frame leakage.",
+            "summary": "CHD-Net accepted and presented at IEEE QPAIN 2026 (99.15% acc, 99.99% AUC). Dual-Stream FreqViT also published at the same conference (97.75% acc on plant disease detection).",
             "link": "https://doi.org/10.1109/QPAIN69676.2026.11545695",
             "image": "/papers/chd-net/cover.png"
         },
         {
             "id": 4,
             "type": "Publication",
-            "title": "Dual-Stream FreqViT Published at IEEE QPAIN 2026",
-            "timeframe": "Jun 2026",
-            "summary": "FreqViT paper accepted and presented at IEEE QPAIN 2026. 97.75% accuracy on plant disease detection using FFT + Vision Transformer fusion.",
-            "link": "https://doi.org/10.1109/QPAIN69676.2026.11546204",
-            "image": "/papers/dual-stream-freqvit/cover.png"
+            "title": "CMA-Fusion & DiaXAI-Stack Accepted at ICCA 2026",
+            "timeframe": "2026",
+            "summary": "CMA-Fusion (cross-modality attention for Alzheimer's detection using 3D MRI) and DiaXAI-Stack (leakage-free stacking ensemble for diabetes prediction with XAI) both accepted for presentation at ICCA 2026.",
+            "link": "#",
+            "image": "/papers/cma-fusion/cover.png"
         }
     ],
     "social": {

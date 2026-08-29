@@ -109,8 +109,8 @@ const Hero = () => {
                     }}
                 >
                     <div className="text-center">
-                        <div className="text-xl md:text-2xl font-black text-white" style={{ fontFamily: 'Outfit' }}>4</div>
-                        <div className="text-[9px] uppercase tracking-widest font-mono mt-0.5" style={{ color: '#818CF8' }}>IEEE Papers</div>
+                        <div className="text-xl md:text-2xl font-black text-white" style={{ fontFamily: 'Outfit' }}>5</div>
+                        <div className="text-[9px] uppercase tracking-widest font-mono mt-0.5" style={{ color: '#818CF8' }}>Publications</div>
                     </div>
                     <div className="w-px h-8 bg-white/10" />
                     <div className="text-center">
