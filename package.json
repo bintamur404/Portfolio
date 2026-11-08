@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "node scripts/build-static.mjs && node scripts/serve.mjs",
+    "build": "node scripts/build-static.mjs",
+    "build:react": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "node scripts/serve.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^9.105.6",
