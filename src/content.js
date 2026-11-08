@@ -398,3 +398,4 @@ export const highlights = [
     text: 'Collaborated with As-Sadaqa and the Bangladesh Red Crescent Society to distribute emergency relief packages in flood-affected regions.',
   },
 ];
+

@@ -541,3 +541,4 @@ fs.copyFileSync(path.join(root, 'src/index.css'), path.join(out, 'style.css'));
 fs.copyFileSync(path.join(root, 'src/site.js'), path.join(out, 'site.js'));
 fs.cpSync(path.join(root, 'public'), out, { recursive: true });
 console.log(`Successfully built ${out} — ${publications.length} publications / ${projects.length} projects`);
+
