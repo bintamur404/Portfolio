@@ -224,17 +224,38 @@
   /* ── 11. CV Preview Modal ── */
   const cvDialog = $('#cv-modal');
   const cvClose = $('#cv-modal-close');
+  const cvBody = $('#cv-modal-body');
+  const CV_SRC = 'Abdullah_Tamur_CV_2027.pdf';
 
   function openCVModal() {
-    if (!cvDialog) return;
+    if (!cvDialog || !cvBody) return;
     lastFocus = document.activeElement;
-    // Lazy-load the PDF only when modal opens (works for both object and iframe)
-    const embed = cvDialog.querySelector('.cv-iframe');
-    if (embed && embed.dataset.cvSrc && !embed.getAttribute('data')) {
-      embed.setAttribute('data', embed.dataset.cvSrc);
+    // Inject iframe fresh each time so it only loads on demand
+    if (!cvBody.querySelector('iframe')) {
+      // Show loading state
+      const loader = document.createElement('div');
+      loader.className = 'cv-modal-loading';
+      loader.setAttribute('aria-label', 'Loading CV…');
+      loader.textContent = 'Loading CV…';
+      cvBody.appendChild(loader);
+
+      const frame = document.createElement('iframe');
+      frame.title = 'Curriculum Vitae Preview';
+      frame.className = 'cv-iframe';
+      frame.setAttribute('allowfullscreen', '');
+      frame.addEventListener('load', () => loader.remove(), { once: true });
+      frame.src = CV_SRC;
+      cvBody.appendChild(frame);
     }
     cvDialog.showModal();
     cvClose?.focus();
+  }
+
+  function closeCVModal() {
+    cvDialog?.close();
+    // Remove iframe so PDF stops loading when modal is closed
+    const frame = cvBody?.querySelector('iframe');
+    if (frame) frame.remove();
   }
 
   $('#preview-cv-btn')?.addEventListener('click', openCVModal);
@@ -246,9 +267,9 @@
   });
   $$('[data-open-cv]').forEach(btn => btn.addEventListener('click', openCVModal));
 
-  cvClose?.addEventListener('click', () => cvDialog?.close());
+  cvClose?.addEventListener('click', closeCVModal);
   cvDialog?.addEventListener('click', (e) => {
-    if (e.target === cvDialog) cvDialog.close();
+    if (e.target === cvDialog) closeCVModal();
   });
   cvDialog?.addEventListener('close', () => lastFocus?.focus());
 

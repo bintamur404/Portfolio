@@ -35,6 +35,10 @@ h1,h2 { font-weight: 600; }
 .skip-link { position: fixed; z-index: 999; top: -90px; left: 12px; background: white; padding: 10px 18px; }
 .skip-link:focus { top: 12px; }
 
+/* Ensure dialogs NEVER render as page content — only as modals */
+dialog { padding: 0; border: 0; }
+dialog:not([open]) { display: none !important; }
+
 /* === READING PROGRESS BAR === */
 .reading-progress {
   position: fixed;
@@ -1115,25 +1119,10 @@ h1 em, h2 em {
 .cv-iframe {
   width: 100%;
   height: 100%;
+  min-height: 100%;
   border: 0;
   display: block;
-  min-height: 100%;
 }
-/* Fallback when browser can't render PDF inline */
-.cv-fallback {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  height: 100%;
-  min-height: 400px;
-  color: #c0d8d0;
-  font-size: 14px;
-  text-align: center;
-  padding: 40px;
-}
-.cv-fallback p { margin-bottom: 12px; opacity: .75; }
 
 /* === EXPERIENCE & SKILLS === */
 .experience-section { background: #f7f8f2; }
@@ -1632,3 +1621,172 @@ h1 em, h2 em {
 }
 
 [hidden] { display: none !important; }
+
+/* ═══════════════════════════════════════════
+   VISUAL POLISH & ENHANCEMENT ADDITIONS
+   ═══════════════════════════════════════════ */
+
+/* CV Modal loading state */
+.cv-modal-body::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3a3d40;
+  z-index: 0;
+}
+.cv-modal-body .cv-iframe {
+  position: relative;
+  z-index: 1;
+}
+
+/* CV loading spinner animation */
+@keyframes cv-spin {
+  to { transform: rotate(360deg); }
+}
+.cv-modal-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: #8eb8ad;
+  font-size: 13px;
+  font-weight: 600;
+  z-index: 2;
+}
+.cv-modal-loading::before {
+  content: '';
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(255,255,255,.12);
+  border-top-color: #4a9e8c;
+  border-radius: 50%;
+  animation: cv-spin .8s linear infinite;
+}
+
+/* Enhanced paper card hover — subtle glow */
+.paper-card:hover {
+  border-color: #9cbdb0;
+  box-shadow: 0 16px 44px rgba(32,63,53,.1), 0 2px 8px rgba(32,63,53,.06);
+  transform: translateY(-4px);
+}
+
+/* Better paper-card-featured accent glow */
+.paper-card--featured {
+  box-shadow: 0 4px 24px rgba(36,91,88,.06);
+}
+.paper-card--featured:hover {
+  box-shadow: 0 20px 56px rgba(32,63,53,.13), 0 4px 12px rgba(32,63,53,.07);
+}
+
+/* Interest card — subtle accent top bar always visible on hover */
+.interest-card:hover::before {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+/* Direction card improved hover */
+.direction-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 24px 56px rgba(34,72,62,.1);
+}
+
+/* Smooth section background transitions */
+.research-interests-section,
+.about-section,
+.research-section,
+.publications-section,
+.projects-section,
+.experience-section,
+.education-section,
+.contact-section,
+.site-header,
+.paper-card,
+.interest-card,
+.direction-card,
+.project-card,
+.skills-panel,
+.education-block {
+  transition: background .4s ease, border-color .3s ease, box-shadow .25s ease;
+}
+
+/* Paper details button improved */
+.paper-details-btn {
+  letter-spacing: .02em;
+  transition: background .18s ease, border-color .18s ease, color .18s ease, transform .18s ease;
+}
+.paper-details-btn:hover {
+  transform: translateX(2px);
+}
+
+/* Filter buttons smooth transitions */
+.filter-button, .project-filter {
+  transition: all .18s ease;
+  letter-spacing: .03em;
+}
+
+/* Stat number — serif glow on hover */
+.stat:hover .stat-number {
+  text-shadow: 0 0 32px rgba(232,216,185,.22);
+}
+
+/* Timeline dot pulse on hover */
+.timeline-item:hover .timeline-dot {
+  transform: scale(1.3);
+}
+
+/* Hero portrait subtle warm tint */
+.hero-portrait {
+  transition: filter .4s ease;
+}
+.hero-portrait-wrap:hover .hero-portrait {
+  filter: saturate(.92) brightness(1.02);
+}
+
+/* Skill pill bounce */
+.skill-pills span {
+  transition: all .18s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.skill-pills span:hover {
+  transform: translateY(-2px);
+}
+
+/* Footer brand hover */
+.footer-brand {
+  transition: color .2s ease;
+}
+.footer-brand:hover { color: #bf965d; }
+
+/* Back to top smooth */
+.back-top {
+  transition: color .2s ease;
+}
+
+/* Modal open animation */
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(16px) scale(.98); }
+  to   { opacity: 1; transform: none; }
+}
+.project-modal[open], .cv-modal[open] {
+  animation: modal-in .25s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Dark mode transition — apply to all colored elements */
+[data-theme="dark"] .paper-card:hover {
+  box-shadow: 0 16px 44px rgba(0,0,0,.35), 0 2px 8px rgba(0,0,0,.2);
+}
+[data-theme="dark"] .paper-card--featured:hover {
+  box-shadow: 0 20px 56px rgba(0,0,0,.45), 0 4px 12px rgba(0,0,0,.25);
+}
+[data-theme="dark"] .direction-card:hover {
+  box-shadow: 0 24px 56px rgba(0,0,0,.38);
+}
+[data-theme="dark"] .stat:hover .stat-number {
+  text-shadow: 0 0 32px rgba(232,216,185,.12);
+}
+[data-theme="dark"] .footer-brand:hover { color: #c0a06d; }

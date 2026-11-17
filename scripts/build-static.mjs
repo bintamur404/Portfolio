@@ -517,14 +517,8 @@ const html = `<!doctype html>
         <button class="cv-modal-close" type="button" id="cv-modal-close" aria-label="Close CV preview">${icon('x', 22)}</button>
       </div>
     </div>
-    <div class="cv-modal-body">
-      <object class="cv-iframe" data-cv-src="Abdullah_Tamur_CV_2027.pdf" type="application/pdf" aria-label="Curriculum Vitae PDF Preview">
-        <div class="cv-fallback">
-          <p>Your browser cannot display the PDF inline.</p>
-          <a class="cv-modal-btn" href="Abdullah_Tamur_CV_2027.pdf" target="_blank" rel="noopener noreferrer">${icon('external', 15)} Open PDF in new tab</a>
-          <a class="cv-modal-btn" href="Abdullah_Tamur_CV_2027.pdf" download="Abdullah_Tamur_CV_2027.pdf">${icon('download', 15)} Download PDF</a>
-        </div>
-      </object>
+    <div class="cv-modal-body" id="cv-modal-body">
+      <!-- iframe injected by JS when modal opens to prevent preload -->
     </div>
   </dialog>
 
