@@ -518,7 +518,13 @@ const html = `<!doctype html>
       </div>
     </div>
     <div class="cv-modal-body">
-      <iframe data-cv-src="Abdullah_Tamur_CV_2027.pdf#view=FitH" title="Curriculum Vitae Preview" class="cv-iframe"></iframe>
+      <object class="cv-iframe" data-cv-src="Abdullah_Tamur_CV_2027.pdf" type="application/pdf" aria-label="Curriculum Vitae PDF Preview">
+        <div class="cv-fallback">
+          <p>Your browser cannot display the PDF inline.</p>
+          <a class="cv-modal-btn" href="Abdullah_Tamur_CV_2027.pdf" target="_blank" rel="noopener noreferrer">${icon('external', 15)} Open PDF in new tab</a>
+          <a class="cv-modal-btn" href="Abdullah_Tamur_CV_2027.pdf" download="Abdullah_Tamur_CV_2027.pdf">${icon('download', 15)} Download PDF</a>
+        </div>
+      </object>
     </div>
   </dialog>
 

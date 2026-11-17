@@ -228,10 +228,10 @@
   function openCVModal() {
     if (!cvDialog) return;
     lastFocus = document.activeElement;
-    // Lazy-load the PDF iframe only when modal opens
-    const iframe = cvDialog.querySelector('.cv-iframe');
-    if (iframe && !iframe.src && iframe.dataset.cvSrc) {
-      iframe.src = iframe.dataset.cvSrc;
+    // Lazy-load the PDF only when modal opens (works for both object and iframe)
+    const embed = cvDialog.querySelector('.cv-iframe');
+    if (embed && embed.dataset.cvSrc && !embed.getAttribute('data')) {
+      embed.setAttribute('data', embed.dataset.cvSrc);
     }
     cvDialog.showModal();
     cvClose?.focus();

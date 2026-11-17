@@ -286,12 +286,12 @@ h1 em, h2 em {
   transition: transform .2s, background .2s, border-color .2s, box-shadow .2s;
 }
 .button:hover { transform: translateY(-2px); }
-.button--primary { background: var(--ink); color: white; border-color: var(--ink); }
-.button--primary:hover { background: #245b58; box-shadow: 0 6px 20px rgba(23,57,62,.18); }
-.button--quiet { color: var(--ink); background: transparent; border-color: transparent; }
+.button--primary { background: #17393e; color: #f0f8f4; border-color: #17393e; }
+.button--primary:hover { background: #245b58; box-shadow: 0 6px 20px rgba(23,57,62,.22); }
+.button--quiet { color: #17393e; background: transparent; border-color: transparent; }
 .button--quiet:hover { background: rgba(42,92,86,.08); }
-.button--outline { background: transparent; border-color: #9cbdb1; color: var(--ink); }
-.button--outline:hover { background: #eaf1e9; border-color: var(--ink); }
+.button--outline { background: transparent; border-color: #9cbdb1; color: #17393e; }
+.button--outline:hover { background: #eaf1e9; border-color: #245b58; }
 
 .hero-socials { display: flex; gap: 22px; margin-top: 48px; flex-wrap: wrap; }
 .hero-socials a {
@@ -1108,14 +1108,32 @@ h1 em, h2 em {
   flex: 1;
   width: 100%;
   height: calc(100% - 65px);
-  background: #525659;
+  background: #3a3d40;
+  overflow: hidden;
+  position: relative;
 }
 .cv-iframe {
   width: 100%;
   height: 100%;
   border: 0;
   display: block;
+  min-height: 100%;
 }
+/* Fallback when browser can't render PDF inline */
+.cv-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  height: 100%;
+  min-height: 400px;
+  color: #c0d8d0;
+  font-size: 14px;
+  text-align: center;
+  padding: 40px;
+}
+.cv-fallback p { margin-bottom: 12px; opacity: .75; }
 
 /* === EXPERIENCE & SKILLS === */
 .experience-section { background: #f7f8f2; }
@@ -1303,13 +1321,13 @@ h1 em, h2 em {
 [data-theme="dark"] .hero-socials a { color: #8ba9a1; border-color: #3d5f58; }
 [data-theme="dark"] .hero-socials a:hover { color: #c0ddd3; border-color: #6a9a8e; }
 
-/* Dark mode buttons — controlled, no glow */
-[data-theme="dark"] .button--primary { background: #1e4240; border-color: #2a5854; color: #d0e8df; }
-[data-theme="dark"] .button--primary:hover { background: #2a5854; color: #e8f4ee; box-shadow: 0 6px 20px rgba(0,0,0,.3); }
-[data-theme="dark"] .button--outline { border-color: #37594f; color: #a8ccc0; background: transparent; }
-[data-theme="dark"] .button--outline:hover { background: #19302e; border-color: #5a877c; color: #c0ddd3; }
-[data-theme="dark"] .button--quiet { color: #a8ccc0; }
-[data-theme="dark"] .button--quiet:hover { background: rgba(255,255,255,.05); }
+/* Dark mode buttons — solid, readable, no glow */
+[data-theme="dark"] .button--primary { background: #2a6b60; border-color: #2a6b60; color: #e8f6f0; }
+[data-theme="dark"] .button--primary:hover { background: #35877a; border-color: #35877a; color: #f0faf5; box-shadow: 0 6px 20px rgba(0,0,0,.35); }
+[data-theme="dark"] .button--outline { border-color: #3a6a60; color: #a8d4c8; background: transparent; }
+[data-theme="dark"] .button--outline:hover { background: #19302e; border-color: #5a9a8c; color: #c8e6de; }
+[data-theme="dark"] .button--quiet { color: #a8d4c8; }
+[data-theme="dark"] .button--quiet:hover { background: rgba(255,255,255,.06); }
 
 /* Dark mode research interests */
 [data-theme="dark"] .research-interests-section { background: #0b181b; border-color: #1a393e; }
