@@ -127,7 +127,7 @@ export const publications = [
     title: 'HemX: An Explainable Hierarchical Machine-Learning Framework for CBC-Based Hematological Triage',
     short: 'HemX',
     category: 'Clinical AI',
-    venue: 'Biomedical Signal Processing and Control (Elsevier)',
+    venue: 'Informatics in Medicine Unlocked (Elsevier)',
     status: 'Under review',
     role: 'First author',
     year: '2026',

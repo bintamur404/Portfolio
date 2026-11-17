@@ -105,11 +105,8 @@
 
   /* ── 7. Publications Filter ── */
   let paperCategory = 'All work';
-  let expanded = false;
   const paperCards = $$('.paper-card');
   const paperButtons = $$('[data-paper-filter]');
-  const showPapers = $('#show-papers');
-  const hidePapers = $('#hide-papers');
   const paperCount = $('#paper-count');
 
   function applyPapers() {
@@ -117,7 +114,7 @@
     paperCards.forEach((card, index) => {
       const matches = paperCategory === 'All work' || card.dataset.paperCategory === paperCategory;
       if (matches) count++;
-      card.hidden = !matches || (paperCategory === 'All work' && !expanded && index >= 5);
+      card.hidden = !matches;
       card.classList.toggle('paper-card--featured', paperCategory === 'All work' && index === 0);
     });
     paperButtons.forEach(b => {
@@ -126,21 +123,12 @@
       b.setAttribute('aria-pressed', String(active));
     });
     if (paperCount) paperCount.textContent = String(count).padStart(2, '0') + ' ITEMS';
-    if (showPapers) showPapers.hidden = paperCategory !== 'All work' || expanded;
-    if (hidePapers) hidePapers.hidden = paperCategory !== 'All work' || !expanded;
   }
 
   paperButtons.forEach(b => b.addEventListener('click', () => {
     paperCategory = b.dataset.paperFilter;
-    expanded = false;
     applyPapers();
   }));
-  showPapers?.addEventListener('click', () => { expanded = true; applyPapers(); });
-  hidePapers?.addEventListener('click', () => {
-    expanded = false;
-    applyPapers();
-    $('#publications')?.scrollIntoView({ behavior: 'smooth' });
-  });
   applyPapers();
 
   /* ── 8. Paper Details Modal (Shows Full Details on Click) ── */
@@ -240,6 +228,11 @@
   function openCVModal() {
     if (!cvDialog) return;
     lastFocus = document.activeElement;
+    // Lazy-load the PDF iframe only when modal opens
+    const iframe = cvDialog.querySelector('.cv-iframe');
+    if (iframe && !iframe.src && iframe.dataset.cvSrc) {
+      iframe.src = iframe.dataset.cvSrc;
+    }
     cvDialog.showModal();
     cvClose?.focus();
   }

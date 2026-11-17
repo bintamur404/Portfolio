@@ -56,7 +56,7 @@ function paperCard(p, i) {
     ? `<a class="paper-link" href="${esc(p.url)}" ${ext} aria-label="Open publication for ${esc(p.short)}">DOI / Paper ${icon('arrow', 14)}</a>`
     : '';
 
-  return `<article class="paper-card ${p.featured && i === 0 ? 'paper-card--featured' : ''} reveal" data-paper-category="${esc(p.category)}" data-paper-id="${esc(p.id)}" data-paper-index="${i}" ${i >= 5 ? 'hidden' : ''}>
+  return `<article class="paper-card ${p.featured && i === 0 ? 'paper-card--featured' : ''} reveal" data-paper-category="${esc(p.category)}" data-paper-id="${esc(p.id)}" data-paper-index="${i}">
     <div class="paper-card-inner">
       <div class="paper-meta-top">
         <span class="paper-number">${esc(p.number)} / ${esc(p.category)}</span>
@@ -365,10 +365,6 @@ const html = `<!doctype html>
         <div class="publication-grid">
           ${publications.map(paperCard).join('')}
         </div>
-        <div class="all-work">
-          <button type="button" class="button button--outline" id="show-papers">View all 8 research works ${icon('right')}</button>
-          <button type="button" class="text-link" id="hide-papers" hidden>Show fewer publications ↑</button>
-        </div>
         <p class="publication-disclaimer">“Accepted” denotes papers accepted for conference publication following peer review. Manuscripts “under review” are currently undergoing journal peer review and are explicitly distinguished.</p>
       </div>
     </section>
@@ -522,7 +518,7 @@ const html = `<!doctype html>
       </div>
     </div>
     <div class="cv-modal-body">
-      <iframe src="Abdullah_Tamur_CV_2027.pdf#view=FitH" title="Curriculum Vitae Preview" class="cv-iframe"></iframe>
+      <iframe data-cv-src="Abdullah_Tamur_CV_2027.pdf#view=FitH" title="Curriculum Vitae Preview" class="cv-iframe"></iframe>
     </div>
   </dialog>
 
